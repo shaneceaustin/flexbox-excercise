@@ -1,4 +1,111 @@
 * { box-sizing: border-box;
 	margin: 0;
-	padding: 0cd;
+	padding: 0;
+}
+ body {
+ 	padding-top: 50px;
+ }
+
+ h2 {
+ 	text-align:center;
+ 	/*padding-left: .5%;*/
+ 	font-size: 70px;
+ 	padding-top: .5%;
+
+ }
+
+
+.top-nav {
+	display:flex;
+	background: black;
+	min-height: 50px;
+	overflow:hidden;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left:0;
+}
+
+.top-nav a { 
+	color: white;
+	text-decoration: none;
+	border-bottom: 5px solid #000;
+	transition: .5s;
+}
+
+.top nav a:hover {
+	color: #047dbf;
+	border-bottom: 5px solid #047dbf
+}
+.brand-text {
+	font-size:30px;
+	margin-left: 15px;
+
+}
+.top-nav-list {
+	display:flex;
+	list-style:none;
+	margin-left: auto;
+}
+.top-nav-list li{
+	margin: 0px 15px;
+	font-size: 21px;
+}
+
+.top-nav-list a {
+	padding: 5px;
+
+}
+
+.full-screen-bg {
+	height: calc(100vh - 50px);
+	width: 100%;
+	background-image: url("../images/large.jpeg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*color: #DE9ADC;*/
+	transition: background-image -.5s
+
+}
+
+.flex-row {
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.col-4-2-1 {
+	width: 23%;
+	margin:1%;
+	padding: 10px;
+}
+
+.com-4-2-1 img {
+	width: 100%;
+}
+
+
+@media ( max-width: 1200px) {
+   .full-screen-bg {
+	background-image: url("../images/medphoto.jpg");
+}
+	.col-4-2-1 {
+		width: 48%;
+	}
+}
+
+@media ( max-width: 800px) {
+	.top-nav {
+		display:block;
+	}
+
+	.full-screen-bg {
+		background-image: url("../images/smallphoto.jpeg");
+	}
+	.col-4-2-1 {
+		width: 98%;
+	}
 }
